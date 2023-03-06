@@ -6,7 +6,7 @@
 /*   By: hemottu <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/05 16:38:13 by hemottu           #+#    #+#             */
-/*   Updated: 2023/03/05 16:45:29 by hemottu          ###   ########.fr       */
+/*   Updated: 2023/03/06 16:59:04 by hemottu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,8 @@ void	ft_putnbr(int nb)
 	}
 }
 
-int main (int ac, char **av)
+int	main(int ac, char **av)
 {
 	ft_putnbr(ac - 1);
 	ft_putchar('\n');
-	return(0);
 }

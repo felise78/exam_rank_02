@@ -6,36 +6,38 @@
 /*   By: hemottu <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/04 14:02:18 by hemottu           #+#    #+#             */
-/*   Updated: 2023/03/04 14:25:06 by hemottu          ###   ########.fr       */
+/*   Updated: 2023/03/06 16:42:32 by hemottu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-int ft_strlen(char *str)
+int	ft_strlen(char *str)
 {
-	int i = 0;
-	while(str[i])
+	int	i = 0;
+
+	while (str[i])
 		i++;
-	return(i);
+	return (i);
 }
 
-int ft_isin(char *str, char c)
+int	ft_isin(char *str, char c)
 {	
-	int i = 0;
+	int	i = 0;
 
 	while (str[i])
 	{
 		if (str[i] == c)
-			return(1);
+			return (1);
 		i++;
 	}
-	return(0);
+	return (0);
 }
 
-void ft_putstr(char *str)
+void	ft_putstr(char *str)
 {
-	int i = 0;
+	int	i = 0;
+
 	while (str[i])
 	{
 		write(1, &str[i], 1);
@@ -43,9 +45,10 @@ void ft_putstr(char *str)
 	}
 }
 
-void ft_searchnreplace(char *str, char a, char b)
+void	ft_searchnreplace(char *str, char a, char b)
 {
-	int i = 0;
+	int	i = 0;
+
 	while (str[i])
 	{
 		if (str[i] == a)
@@ -56,11 +59,11 @@ void ft_searchnreplace(char *str, char a, char b)
 	}
 }
 
-int main (int ac, char **av)
+int	main(int ac, char **av)
 {
 	if (ac == 4 && ft_strlen(av[2]) == 1)
 	{
-		if(!ft_isin(av[1], av[2][0]))
+		if (!ft_isin(av[1], av[2][0]))
 			ft_putstr(av[1]);
 		else
 			ft_searchnreplace(av[1], av[2][0], av[3][0]);

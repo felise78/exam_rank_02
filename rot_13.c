@@ -6,13 +6,13 @@
 /*   By: hemottu <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 20:26:19 by hemottu           #+#    #+#             */
-/*   Updated: 2023/02/27 20:31:51 by hemottu          ###   ########.fr       */
+/*   Updated: 2023/03/06 16:29:08 by hemottu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void ft_rot_13(char c)
+void	ft_rot_13(char c)
 {
 	if (c >= 'n' && c <= 'z' || c >= 'N' && c <= 'Z')
 		c = c - 13;
@@ -21,9 +21,9 @@ void ft_rot_13(char c)
 	write (1, &c, 1);
 }
 
-int main (int ac, char **av)
+int	main(int ac, char **av)
 {
-	int i = 0;
+	int	i = 0;
 
 	if (ac == 2)
 	{

@@ -6,7 +6,7 @@
 /*   By: hemottu <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/04 11:53:17 by hemottu           #+#    #+#             */
-/*   Updated: 2023/03/04 12:33:16 by hemottu          ###   ########.fr       */
+/*   Updated: 2023/03/06 16:58:09 by hemottu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 int	ft_is_in_str(char *str, char c)
 {
-	int i = 0;
+	int	i = 0;
+
 	while (str[i])
 	{
 		if (str[i] == c)
@@ -26,7 +27,8 @@ int	ft_is_in_str(char *str, char c)
 
 int	ft_is_solo(char *str, char c, int len)
 {
-	int i = 0;
+	int	i = 0;
+
 	while (str[i] && str[i] != c)
 		i++;
 	if (i == len)
@@ -36,7 +38,8 @@ int	ft_is_solo(char *str, char c, int len)
 
 void	ft_inter(char *s1, char *s2)
 {
-	int i = 0;
+	int	i = 0;
+
 	while (s1[i])
 	{
 		if (ft_is_in_str(s2, s1[i]) && ft_is_solo(s1, s1[i], i))
@@ -45,7 +48,7 @@ void	ft_inter(char *s1, char *s2)
 	}
 }
 
-int main (int ac, char **av)
+int	main(int ac, char **av)
 {
 	if (ac == 3)
 	{

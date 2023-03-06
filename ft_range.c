@@ -6,17 +6,17 @@
 /*   By: hemottu <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/27 20:51:07 by hemottu           #+#    #+#             */
-/*   Updated: 2023/02/27 21:12:05 by hemottu          ###   ########.fr       */
+/*   Updated: 2023/03/06 16:26:50 by hemottu          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 
-int     *ft_range(int start, int end)
+int	*ft_range(int start, int end)
 {
-	int *tab;
-	int len;
-	int i = 0;
+	int	*tab;
+	int	len;
+	int	i = 0;
 
 	if (start == end)
 	{
@@ -27,13 +27,13 @@ int     *ft_range(int start, int end)
 	{
 		len = start - end + 1;
 		tab = malloc(sizeof(int) * len);
-                 while (start >= end)
-                  {
-                          tab[i] = start;
-                          start--;
-                          i++;
-		  }
- 	}
+		while (start >= end)
+		{
+			tab[i] = start;
+			start--;
+			i++;
+		}
+	}
 	else if (end > start)
 	{
 		len = end - start + 1;
@@ -45,7 +45,7 @@ int     *ft_range(int start, int end)
 			i++;
 		}	
 	}
-	return(tab);
+	return (tab);
 }
 /*
 #include <stdio.h>
